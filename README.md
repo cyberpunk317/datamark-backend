@@ -7,4 +7,4 @@ Contains code for backend part of DataMark application
   - templates - HTML files, divided into logical groups
   - *.py, *.sql - scripts, necessary for app deployment   
 - tests
-- venv - python virtualenv with necessary packages installed
+- requirements.txt - necessary python packages, could be used with pip install -r requirements.txt
