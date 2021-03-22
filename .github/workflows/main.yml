@@ -27,4 +27,4 @@ jobs:
     steps:
     -  run: |
         pip install pytest
-        pytest --doctest-modules --junitxml=junit/test-results.xml
+        pytest tests --doctest-modules --junitxml=junit/test-results.xml
