@@ -26,6 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     -  run: |
-        ls -alh
+        ls -alh ../
         pip install pytest
-        pytest . --doctest-modules --junitxml=junit/test-results.xml
+        pytest ../ --doctest-modules --junitxml=junit/test-results.xml
