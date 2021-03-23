@@ -1,5 +1,3 @@
-from sqlalchemy.orm import relationship
-
 from config import db
 
 
