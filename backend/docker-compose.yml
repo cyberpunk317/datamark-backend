@@ -1,0 +1,27 @@
+version: "3"
+services:
+  db_api:
+    build: ./
+    ports:
+      - "5000:5000"
+    container_name: backend
+  client:
+    build: ../datamark-front
+    ports:
+      - "80:80"
+    container_name: client
+  nosql_db:
+    image: mongo
+    ports:
+      - "27017:27017"
+    container_name: app-nosql-db
+  sql_db:
+    image: postgres
+    restart: always
+    env_file:
+      - postgres.env
+    volumes:
+      - /tmp/data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    container_name: app-sql-db
