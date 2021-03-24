@@ -13,7 +13,7 @@ jobs:
       run: |
           export PATH=$PATH:/home/runner/.local/bin
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r backend/requirements.txt
   lint:
     name: Lint with flake8
     runs-on: ubuntu-latest
@@ -21,7 +21,7 @@ jobs:
     steps:
     - run: |
         pip install flake8
-        flake8 .
+        flake8 ./backend
   test:
     name: Test with pytest
     runs-on: ubuntu-latest
