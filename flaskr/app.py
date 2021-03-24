@@ -1,12 +1,9 @@
 from config import app, api
 from res.UserRes import UserResource as User
-from res.UsersRes import UsersResource as Users
 
 
-api.add_resource(Users,
-                 '/users')
 api.add_resource(User,
-                 '/users/<int:id>')
+                 '/users/<int:user_id>')
 
 
 @app.errorhandler(404)
