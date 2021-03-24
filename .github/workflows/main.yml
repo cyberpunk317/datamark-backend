@@ -20,6 +20,7 @@ jobs:
     
     steps:
     - run: |
+        echo "::add-path::/home/runner/.local/bin"
         pip install flake8
         flake8 ./backend
   test:
@@ -28,5 +29,6 @@ jobs:
     
     steps:
     -  run: |
+        echo "::add-path::/home/runner/.local/bin"
         pip install pytest
         pytest
