@@ -1,3 +1,4 @@
 [submodule "datamark-front"]
 	path = client
 	url = https://github.com/BohdanMogu4iy/datamark-front
+	branch = development
